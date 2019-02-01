@@ -1,2 +1,2 @@
 # Scientific-coding
-Codes relate to various scientific topics in math.biolgiy, and physics
+Codes relate to various topics in math.biolgiy, and physics
