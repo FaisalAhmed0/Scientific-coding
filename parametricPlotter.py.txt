@@ -1,0 +1,44 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from numpy.random import random as rnd
+from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.colors as col
+import matplotlib.cm as cms
+from scipy.optimize import fsolve
+from scipy.integrate import ode
+from matplotlib import animation
+num_steps = 100
+plt.close('all')
+bound = 20
+fig = plt.figure()
+ax = plt.axes(xlim=(-3,3),ylim = (-3,3))
+
+
+(myline,) = ax.plot([],[],lw=2)
+(mypoint,) = ax.plot([],[],'ro',ms=9)
+
+#
+#x_steps = 2*(rnd(num_steps)<.5) -1
+#y_steps = 2*(rnd(num_steps)<.5) -1
+#x_coord = np.cumsum(x_steps)
+#y_coord = np.cumsum(y_steps)
+#
+#
+#def get_step(n,x,y,this_line,this_point):
+#    this_line.set_data(x[:n+1],y[:n+1])
+#    this_point.set_data(x[n],y[n])
+    
+#my_movie = animation.FuncAnimation(fig,get_step,frames = num_steps,fargs=(x_coord,y_coord\
+#                                                                          ,myline,mypoint))    
+def init():
+    myline.set_data([],[])
+    return myline
+def animate(i):
+    t = np.linspace(0,10,1000)
+    y = np.sin(t)
+    x = np.cos(t)
+    myline.set_data(x[:i+1],y[:i+1])
+    mypoint.set_data(x[i],y[i])
+    return myline
+anim = animation.FuncAnimation(fig,animate,init_func=init,frames = 2000,interval = 1)
+#anim.save('sineWave.mp4',fps=30,extra_args=['-vcodec','libx264'])    
