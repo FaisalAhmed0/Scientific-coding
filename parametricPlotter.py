@@ -1,12 +1,6 @@
 #parametric plotter with animation 
 import numpy as np
 import matplotlib.pyplot as plt
-from numpy.random import random as rnd
-from mpl_toolkits.mplot3d import Axes3D
-import matplotlib.colors as col
-import matplotlib.cm as cms
-from scipy.optimize import fsolve
-from scipy.integrate import ode
 from matplotlib import animation
 num_steps = 100 #steps size for the animator 
 plt.close('all')
