@@ -1,4 +1,5 @@
 # Visualization of the mandelbrot set
+# to obtain julia set fix the values of x0 and y0
 import numpy as np, matplotlib.pyplot as plt
 max_iterations = 32
 x_min, x_max = -2.5, 1.5
