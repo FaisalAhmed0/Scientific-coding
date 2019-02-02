@@ -11,7 +11,7 @@ from matplotlib import animation
 num_steps = 100 #steps size for the animator 
 plt.close('all')
 fig = plt.figure()
-interval = 3 #specofy the axes limits
+interval = 3 #specify the axes limits
 ax = plt.axes(xlim=(-interval,interval),ylim = (-interval,interval))
 
 (myline,) = ax.plot([],[],lw=2) # ploter line 
