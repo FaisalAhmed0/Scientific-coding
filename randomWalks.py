@@ -4,6 +4,7 @@ Created on Mon Oct 30 14:02:32 2017
 
 @author: Faisal
 """
+# This is the testing branch
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy.random import random as rnd
