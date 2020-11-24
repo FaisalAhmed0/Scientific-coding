@@ -7,6 +7,8 @@ Created on Mon Oct 30 14:02:32 2017
 Solution for population dynamics problem assuming infinite resources
 dy/dt = kA
 """
+
+# This is branch2
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
